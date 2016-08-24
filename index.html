@@ -36,10 +36,13 @@
 
 			.reveal blockquote {
 				line-height: 1.5em;
+				padding: 20px;
 			}
 
 			.reveal em {
     			font-weight: bold;
+    			font-size: 110%;
+    			color: white;
 			}
 
 			.reveal h1,
@@ -61,6 +64,16 @@
 
 			.reveal li {
     			margin-bottom: 1em;
+			}
+
+			/* Slide navigation: hide up/down arrows. */
+			.reveal .controls .navigate-up,
+			.reveal .controls .navigate-down {
+				display: none;
+			}
+
+			.reveal .controls .navigate-right {
+				left: 50px;
 			}
 		</style>
 
@@ -86,8 +99,8 @@
 			<div class="slides">
 				<section>
 					<h1>JavaScript</h1>
-					<h3><a href="images/2001-jupiter-and-beyond-the-infinite.jpg">And Beyond The Infinite</a></h3>
-					<h3>(P.S. Also try to be a good person)</h3>
+					<h3>And Beyond The <a href="images/2001-jupiter-and-beyond-the-infinite.jpg">Infinite</a></h3>
+					<h3>(While trying not to be a bad person)</h3>
 					<p>
 						<small><a href="http://themaingate.net">David Calhoun</a> / <a href="http://twitter.com/franksvalli">@franksvalli</a></small>
 					</p>
@@ -98,39 +111,38 @@
 				</section>
 
 				<section>
-					<h2>Who the heck is this guy?</h2>
-					<ul>
-						<li>Worked at a few places as a frontend engineer</li>	
-						<li>Worked at Skybox, building dashboards for monitoring the health of satellites in space</li>
-					</ul>
+					<h2>Beyond The Infinite?</h2>
+					<p>Geeky 2001 reference.. because SPACE!</p>
+					<img src="images/2001-dave.jpg">
 
 					<aside class="notes">
-						Skybox was acquired by Google in 2014, now rebranded as Terra Bella
-						What are dashboards?  Will get into that soon.
+						Terra Bella acquired by Google in 2014
+						What are dashboards?  Will get into that later.
 					</aside>
 				</section>
 
+
 				<section>
-					<h2>Two main takeaways</h2>
+					<h2>Who the heck is this guy?</h2>
 					<ul>
-						<li>Golden age of JavaScript - anything is possible.  (Even <a href="https://reaktor.com/space/">JavaScript in space</a>!)</li>
-						<li>Don't devote to 100% tech.  Don't ignore improving yourself as a <em>human being</em>.</li>
+						<li>Worked at a few places as a frontend engineer</li>
+						<li>Previously worked on dashboards for satellite telemetry at Terra Bella (formerly Skybox)</li>
+						<li>Previously did mobile web stuff at Yahoo! and CBS Interactive</li>
 					</ul>
 
-					<p></p>
-					<p>(super preachy, but bear with me...)</p>
-
 					<aside class="notes">
-						Feel free to zone out after this slide!  ;)
+						Will refer to Terra Bella as Skybox here.
+						Skybox acquired by Google in 2014.
+						What are dashboards?  Will get into that later.
 					</aside>
-				</section>				
+				</section>			
 
 				<section>
 					<h2>Outline</h2>
 					<ol>
 						<li>A very brief history of JavaScript</li>
 						<li>JavaScript and web tech at Skybox</li>
-						<li>Challenges</li>
+						<li>Challenges: technical and nontechnical</li>
 					</ol>
 
 					<aside class="notes">
@@ -149,19 +161,23 @@
 				<section data-background-video="video/javascript-glittery-cursor.mp4">
 					<h2>In the beginning....</h2>
 
-					<p>JavaScript as a toy language</p>
-
-					<p>Geocities / Angelfire / Tripod / AOL</p>
-
-					<p>The era of <a href="http://www.mf2fm.com/rv/dhtmltinkerbell.php">glittery cursors</a> and other gimmicky stuff</p>
+					<ul>
+						<li>JavaScript as a toy language</li>
+						<li>Era of <a href="http://www.mf2fm.com/rv/dhtmltinkerbell.php">glittery cursors</a> and other gimmicky stuff</li>
+						<li>This perception of JS still persists</li>
+					</ul>
 
 					<aside class="notes">
-
+						Geocities / Angelfire / Tripod / AOL
 					</aside>
 				</section>
 
 				<section>
-					<h2>Full page reloads / popups</h2>
+					<h2>Pre-Ajax days</h2>
+
+					<ul>
+						<li>Full page reloads or popups</li>
+					</ul>
 
 					<pre>
 						<code class="hljs" data-trim contenteditable>
@@ -186,8 +202,11 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 					<h2>Ajax era</h2>
 
 					<ul>
-						<li>Dynamic content.  No popup windows and page reloads needed anymore!</li>
+						<li>Dynamic content loaded whenever needed.</li>
+						<li>No popup windows and page reloads needed anymore!</li>
 					</ul>
+
+					<img src="images/ajax.png" style="background: none; border: 0;">
 
 					<aside class="notes">
 
@@ -198,7 +217,37 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 					<h2>Framework era</h2>
 
 					<ul>
-						<li>Entire site built with JS</li>
+						<li>Entire sites built with JavaScript</li>
+						<li>MVC, MV* frameworks</li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Today: golden age</h2>
+
+					<ul>
+						<li>Previously: <a href="https://en.wikipedia.org/wiki/JavaScript#Standardization">language stagnation</a></li>
+						<li>Present and future: ES6, ES7, ES8 and beyond.</li>
+						<li>JS running <a href="https://nodejs.org">servers</a></li>
+						<li>JS powering <a href="http://nodebots.io/">robotics</a></li>
+						<li>JS <a href="https://reaktor.com/blog/node-js-satellite-means-anyone-can-space-programmer/">in space</a>!</li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Limitless?</h2>
+
+					<ul>
+						<li>Many applications, only really limited by your imagination</li>
+						<li>Much more than a toy language!</li>
 					</ul>
 
 					<aside class="notes">
@@ -225,7 +274,59 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 				</section>
 
 				<section>
+					<h2></h2>
+
+					<ul>
+						<li>"Godfather screen": displays all the vital health telemetry from the satellites</li>
+						<li>Various charts to display telemetry readings over time, monitor trends</li>
+						<li>Sortable tables</li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2></h2>
+
+					<ul>
+						<li>initially engineers wanted to use Python, but the argument for using web tech was advanced.  Whole MOC running with web tech.</li>
+						<li>started to get Node off the ground before acquisition</li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
 					<h2>3. Challenges</h2>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>A few tech challenges...</h2>
+
+					<ul>
+						<li>implementation: browsers choking on too much WebSocket throughput, browsers choking on trying to render too much data to sortable tables, etc (issue: DOM thrashing, view issues)</li>
+						<li>deployment: HUGE issue - JS in MOC was effectively the production version.  SUPER locked down and separated environment.  Physical airgap - all interaction had to be done inside physical MOC</li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>People Problems</h2>
+
+					<p>Most challenges not really related to tech stack choices.  Biggest issues are people issues (dealing with their perception of JS), organizational issues, etc</p>
+
+					<p>TODO Brief discussion about some folks starting out ignoring people skills and focusing 100% to being "smart", focusing on programming languages, etc.  This leads to more organizational issues, further split between managers and engineers.  Focusing on non-tech skills is healthy and challenges and changes you as a person (learn a natural language instead of another programming language, etc)...  People need to stay balanced.</p>
 
 					<aside class="notes">
 
@@ -235,10 +336,56 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 				<section>
 					<h2></h2>
 					<blockquote cite="https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People">
-						&ldquo;When dealing with people, let us remember we are not dealing with <em>creatures of logic</em>. We are dealing with <em>creatures of emotion</em>, creatures bristling with prejudices and motivated by pride and vanity.&rdquo;
+						"When dealing with people, let us remember we are not dealing with <em>creatures of logic</em>. We are dealing with <em>creatures of emotion</em>, creatures bristling with prejudices and motivated by pride and vanity."
 						<br/><br/>-Dale Carnegie
 					</blockquote>
 				</section>
+
+				<section>
+					<h2>Organizational Problems</h2>
+
+					<ul>
+						<li>hardware engineers skeptical of JS and its quirks</li>
+						<li>Node.js not supported in production at G.  Limited tech stack choices for future work.</li>
+					</ul>
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>My Own Problems</h2>
+
+					<p>(I got lots!)</p>
+
+					<blockquote cite="https://www.goodreads.com/quotes/7494681-85-of-your-financial-success-is-due-to-your-personality">
+						"85% of your financial success is due to your personality and ability to communicate, negotiate, and lead.  Shockingly, only 15% is due to technical knowledge."
+						<br/><br/>-Carnegie Institute of Technology
+					</blockquote>
+				</section>
+
+				<section>
+					<h2></h2>
+					<blockquote cite="https://www.goodreads.com/quotes/108923-it-is-the-individual-who-is-not-interested-in-his">
+						"It is the individual who is <em>not interested in his fellow men</em> who has the greatest difficulties in life and provides the greatest injury to others. It is from among such individuals that <em>all human failures</em> spring."
+						<br/><br/>-Alfred Adler
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Main takeaways</h2>
+					<ol>
+						<li>JavaScript is very capable of many things.  Use your imagination.</li>
+						<li>Our biggest limitation isn't technology, but our nontechnical abilities.</li>
+					</ol>
+
+					<aside class="notes">
+						-Reiterate takeaways: challenges not really related to limitations of JS.  There are always workarounds/compromises.  Biggest issues are organizational.
+
+						-set career goals??
+					</aside>
+				</section>	
 
 				<section style="text-align: left;">
 					<h1>That's all, folks!</h1>
