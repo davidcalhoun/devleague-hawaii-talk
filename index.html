@@ -176,10 +176,11 @@
 					<h2>Pre-Ajax days</h2>
 
 					<ul>
-						<li>Full page reloads or popups</li>
+						<li>Full page reloads</li>
+						<li>Or popups: <a href="http://web.archive.org/web/20020227235102/http://mercury.beseen.com/quizlet/g/38053/quizlet.js">Beseen Quizlet</a>, Guestbooks, etc</li>
 					</ul>
 
-					<pre>
+					<pre style="box-shadow: none;">
 						<code class="hljs" data-trim contenteditable>
 
 //Beseen.com Quizlet
@@ -189,8 +190,6 @@ var lqg38053
 lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38053/niblet.html","NibletWindow","toolbar=no,scrollbars=no,directories=no, status=no,menubar=no,resizable=no,width=240,height=300");
 						</code>
 					</pre>
-
-					<a href="http://web.archive.org/web/20020227235102/http://mercury.beseen.com/quizlet/g/38053/quizlet.js">Beseen Quizlet</a>
 
 					<aside class="notes">
 
@@ -206,7 +205,7 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 						<li>No popup windows and page reloads needed anymore!</li>
 					</ul>
 
-					<img src="images/ajax.png" style="background: none; border: 0;">
+					<img src="images/ajax.png" style="background: none; border: 0; box-shadow: none;">
 
 					<aside class="notes">
 
@@ -264,8 +263,21 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 					</aside>
 				</section>
 
+
 				<section>
-					<h2>Satellite Dashboards?  What?</h2>
+					<h2>We launched a few products...</h2>
+
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/RMi0DbQGfxs?start=19" frameborder="0" allowfullscreen></iframe>
+
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Dashboards?</h2>
 					<iframe width="853" height="480" src="https://www.youtube.com/embed/nE09oh1ARZ8?start=195" frameborder="0" allowfullscreen></iframe>
 
 					<aside class="notes">
@@ -274,12 +286,42 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 				</section>
 
 				<section>
-					<h2></h2>
+					<h2>Godfather screen</h2>
+
+					<img src="images/video3.png">
+
+					<aside class="notes">
+						"Godfather screen": displays all the vital health telemetry from the satellites
+					</aside>
+				</section>
+
+				<section>
+					<h2>Charts</h2>
+
+					<img src="images/video2.png">
+
+					<aside class="notes">
+						Various charts to display telemetry readings over time, monitor trends
+					</aside>
+				</section>
+
+				<section>
+					<h2>More Charts</h2>
+
+					<img src="images/video1.png">
+
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Lots o' web tech</h2>
 
 					<ul>
-						<li>"Godfather screen": displays all the vital health telemetry from the satellites</li>
-						<li>Various charts to display telemetry readings over time, monitor trends</li>
-						<li>Sortable tables</li>
+						<li>Initial push for Python-based dashboards</li>
+						<li>Engineers were skeptical of web tech, JavaScript</li>
+						<li>Some initial work with Node.js</li>
 					</ul>
 
 					<aside class="notes">
@@ -288,15 +330,18 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 				</section>
 
 				<section>
-					<h2></h2>
-
-					<ul>
-						<li>initially engineers wanted to use Python, but the argument for using web tech was advanced.  Whole MOC running with web tech.</li>
-						<li>started to get Node off the ground before acquisition</li>
-					</ul>
+					<img src="images/apollo9.jpg">
 
 					<aside class="notes">
+						NASA mission control room (Apollo 9)
+					</aside>
+				</section>
 
+				<section>
+					<img src="images/moc.png">
+
+					<aside class="notes">
+						
 					</aside>
 				</section>
 
@@ -312,29 +357,19 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 					<h2>A few tech challenges...</h2>
 
 					<ul>
-						<li>implementation: browsers choking on too much WebSocket throughput, browsers choking on trying to render too much data to sortable tables, etc (issue: DOM thrashing, view issues)</li>
-						<li>deployment: HUGE issue - JS in MOC was effectively the production version.  SUPER locked down and separated environment.  Physical airgap - all interaction had to be done inside physical MOC</li>
+						<li>implementation: too much WebSocket throughput, DOM thrashing issues</li>
+						<li>deployment: JS in MOC super locked down</li>
 					</ul>
 
 					<aside class="notes">
+						browsers choking on trying to render too much data to sortable tables, etc (issue: DOM thrashing, view issues)
 
+						HUGE issue - JS in MOC was effectively the production version.  SUPER locked down and separated environment.  Physical airgap - all interaction had to be done inside physical MOC
 					</aside>
 				</section>
 
 				<section>
-					<h2>People Problems</h2>
-
-					<p>Most challenges not really related to tech stack choices.  Biggest issues are people issues (dealing with their perception of JS), organizational issues, etc</p>
-
-					<p>TODO Brief discussion about some folks starting out ignoring people skills and focusing 100% to being "smart", focusing on programming languages, etc.  This leads to more organizational issues, further split between managers and engineers.  Focusing on non-tech skills is healthy and challenges and changes you as a person (learn a natural language instead of another programming language, etc)...  People need to stay balanced.</p>
-
-					<aside class="notes">
-
-					</aside>
-				</section>
-
-				<section>
-					<h2></h2>
+					<h2>People Challenges</h2>
 					<blockquote cite="https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People">
 						"When dealing with people, let us remember we are not dealing with <em>creatures of logic</em>. We are dealing with <em>creatures of emotion</em>, creatures bristling with prejudices and motivated by pride and vanity."
 						<br/><br/>-Dale Carnegie
@@ -342,11 +377,35 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 				</section>
 
 				<section>
-					<h2>Organizational Problems</h2>
+					<h2>People Challenges</h2>
 
 					<ul>
-						<li>hardware engineers skeptical of JS and its quirks</li>
-						<li>Node.js not supported in production at G.  Limited tech stack choices for future work.</li>
+						<li>Hardware engineers skeptical of JS and its quirks</li>
+						<li>In any organization, the biggest issues tend to be people/organization issues</li>
+					</ul>
+
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>People Problems<br/> are very different than <br/>software problems</h2>
+
+
+					<aside class="notes">
+						TODO Brief discussion about some folks starting out ignoring people skills and focusing 100% to being "smart", focusing on programming languages, etc.  This leads to more organizational issues, further split between managers and engineers.  Focusing on non-tech skills is healthy and challenges and changes you as a person (learn a natural language instead of another programming language, etc)...  People need to stay balanced.
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Organizational Challenges</h2>
+
+					<ul>
+						<li>More freedom as a small company</li>
+						<li>Node.js not supported in production at Google</li>
+						<li>Big established organizations have less freedom in general (tech stack, etc)</li>
 					</ul>
 
 					<aside class="notes">
@@ -360,9 +419,23 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 					<p>(I got lots!)</p>
 
 					<blockquote cite="https://www.goodreads.com/quotes/7494681-85-of-your-financial-success-is-due-to-your-personality">
-						"85% of your financial success is due to your personality and ability to communicate, negotiate, and lead.  Shockingly, only 15% is due to technical knowledge."
+						"85% of your financial success is due to your personality and ability to communicate, negotiate, and lead.  Shockingly, <em>only 15% is due to technical knowledge</em>."
 						<br/><br/>-Carnegie Institute of Technology
 					</blockquote>
+				</section>
+
+				<section>
+					<h2>Main takeaways</h2>
+					<ol>
+						<li>JavaScript is very capable of many things.  Use your imagination.</li>
+						<li>Our biggest limitation isn't technology, but our nontechnical abilities.  Work on yourself.</li>
+					</ol>
+
+					<aside class="notes">
+						-Reiterate takeaways: challenges not really related to limitations of JS.  There are always workarounds/compromises.  Biggest issues are organizational.
+
+						-set career goals??
+					</aside>
 				</section>
 
 				<section>
@@ -372,20 +445,6 @@ lqg38053=window.open("/web/20020227235102/http://mercury.beseen.com/quizlet/g/38
 						<br/><br/>-Alfred Adler
 					</blockquote>
 				</section>
-
-				<section>
-					<h2>Main takeaways</h2>
-					<ol>
-						<li>JavaScript is very capable of many things.  Use your imagination.</li>
-						<li>Our biggest limitation isn't technology, but our nontechnical abilities.</li>
-					</ol>
-
-					<aside class="notes">
-						-Reiterate takeaways: challenges not really related to limitations of JS.  There are always workarounds/compromises.  Biggest issues are organizational.
-
-						-set career goals??
-					</aside>
-				</section>	
 
 				<section style="text-align: left;">
 					<h1>That's all, folks!</h1>
